@@ -25,3 +25,16 @@ Each question is searched on its own. The chat shows the answer and the passages
 python -m venv .venv
 .venv\Scripts\activate
 pip install streamlit python-dotenv google-genai pypdf
+
+**# Copy .env.example to .env and add your keys:**
+
+GEMINI_API_KEY=
+PINECONE_API_KEY=
+PINECONE_INDEX_NAME=cricket-rules
+
+**## Run**
+
+python check_setup.py
+python create_index.py
+python ingest.py
+streamlit run app.py
